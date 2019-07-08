@@ -10,8 +10,8 @@ private:
 public:
     TimingMicros(int32_t, int8_t);
     TimingMicros();
-    void SetPeriod(int32_t);
-    void SetFrequency(int32_t);
+    void setPeriod(int32_t);
+    void setFrequency(int32_t);
     bool timeHasCome();    
 };
 
@@ -23,8 +23,8 @@ private:
 public:
     TimingMillis(int32_t, int8_t);
     TimingMillis();
-    void SetPeriod(int32_t);
-    void SetFrequency(int32_t);
+    void setPeriod(int32_t);
+    void setFrequency(int32_t);
     bool timeHasCome();    
 };
 #endif

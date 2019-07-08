@@ -4,21 +4,21 @@
 TimingMicros::TimingMicros(int32_t t, int8_t mode)
 {
     if (mode == 0)
-        TimingMicros::SetPeriod(t);
+        TimingMicros::setPeriod(t);
     if (mode == 1)
-        TimingMicros::SetFrequency(t);
+        TimingMicros::setFrequency(t);
 }
 
 TimingMicros::TimingMicros()
 {
 }
 
-void TimingMicros::SetPeriod(int32_t p)
+void TimingMicros::setPeriod(int32_t p)
 {
     periodMicros = p;
 }
 
-void TimingMicros::SetFrequency(int32_t fr)
+void TimingMicros::setFrequency(int32_t fr)
 {
     periodMicros = 1000000 / fr;
 }
@@ -38,23 +38,23 @@ bool TimingMicros::timeHasCome()
 TimingMillis::TimingMillis(int32_t t, int8_t mode)
 {
     if (mode == 0)
-        TimingMillis::SetPeriod(t);
+        TimingMillis::setPeriod(t);
     if (mode == 1)
-        TimingMillis::SetFrequency(t);
+        TimingMillis::setFrequency(t);
 }
 
 TimingMillis::TimingMillis()
 {
 }
 
-void TimingMillis::SetPeriod(int32_t p)
+void TimingMillis::setPeriod(int32_t p)
 {
     periodMillis = p;
 }
 
-void TimingMillis::SetFrequency(int32_t fr)
+void TimingMillis::setFrequency(int32_t fr)
 {
-    periodMillis = 1000000 / fr;
+    periodMillis = 1000 / fr;
 }
 
 bool TimingMillis::timeHasCome()
