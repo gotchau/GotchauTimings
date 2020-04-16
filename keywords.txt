@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map For GotchauTimings
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Timing              KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+
+setPeriod           KEYWORD2
+setFrequency        KEYWORD2
+timeHasCome         KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+Millis              LITERAL1
+Micros              LITERAL1
+Period              LITERAL1
+Frequency           LITERAL1
