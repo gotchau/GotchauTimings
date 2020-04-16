@@ -17,6 +17,7 @@ enum TimingMode
 class Timing
 {
 private:
+    bool enabled = false;
     uint32_t now = 0;
     uint32_t last = 0;
     uint32_t period = 0;
@@ -24,6 +25,8 @@ private:
 
 public:
     Timing(uint32_t = 1000, TimingMode = Period, TimingType = Millis);
+    void start();
+    void stop();
     void setPeriod(uint32_t);
     void setFrequency(uint32_t);
     bool timeHasCome();

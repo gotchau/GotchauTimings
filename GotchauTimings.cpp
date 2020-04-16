@@ -14,6 +14,16 @@ Timing::Timing(uint32_t time, TimingMode mode, TimingType type)
     }
 }
 
+void Timing::start()
+{
+    enabled = true;
+}
+
+void Timing::stop()
+{
+    enabled = false;
+}
+
 void Timing::setPeriod(uint32_t p)
 {
     period = p;
@@ -44,7 +54,7 @@ bool Timing::timeHasCome()
         break;
     }
 
-    if (now - last >= period)
+    if (enabled && now - last >= period)
     {
         last = now;
         return true;
